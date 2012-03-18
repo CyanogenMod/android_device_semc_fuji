@@ -90,9 +90,10 @@ BOARD_CUSTOM_BOOTIMG_MK := device/semc/fuji/custombootimg.mk
 TARGET_RECOVERY_PRE_COMMAND := "touch /cache/recovery/boot;sync;"
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_USES_RECOVERY_CHARGEMODE := false
+TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_CUSTOM_GRAPHICS := ../../../device/semc/fuji/recovery/graphics.c
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/semc/fuji/recovery/recovery_keys.c
 
-BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p1
+BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/vold/179:15
 # A custom ota package maker for a device without an exposed boot partition
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/semc/fuji/releasetools/semc_ota_from_target_files
